@@ -22,9 +22,9 @@ const overAge = 0.60;
 let finalPrice = ""
 
 if (userAge <= 18) {
-    finalPrice = (price * underAge);
+    finalPrice = (price * underAge).toFixed(2);
 } else if (userAge >= 65) {
-    finalPrice = (price * overAge)
+    finalPrice = (price * overAge).toFixed(2);
 } else {
     finalPrice = price
 }
