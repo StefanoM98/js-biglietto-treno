@@ -5,3 +5,7 @@ const street = parseInt (prompt ("Quanti chilometri vuoi percorrere?"));
 // ETA' DEL CLIENTE TRASFORMANDO IL DATO INSERITO IN NUMERO
 const userAge = parseInt (prompt ("Quanti anni hai? (in base alla tua età avrai uno sconto)"))
 console.log(street, userAge);
+
+// CALCOLARE IL PREZZO DEL BIGLIETTO IN BASE AI CHILOMETRI SCELTI
+const price = street * 0.21
+console.log(price);
