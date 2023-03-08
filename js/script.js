@@ -7,5 +7,21 @@ const userAge = parseInt (prompt ("Quanti anni hai? (in base alla tua età avrai
 console.log(street, userAge);
 
 // CALCOLARE IL PREZZO DEL BIGLIETTO IN BASE AI CHILOMETRI SCELTI
-const price = street * 0.21
+const price = street * 0.21;
 console.log(price);
+
+// DEFINIAMO GLI SCONTI IN BASE ALL'ETA' DEL CLIENTE
+const underAge = 0.80;
+const overAge = 0.60;
+// Calcoliamo il prezzo in base all'età del cliente
+let finalPrice = ""
+
+if (userAge < 18) {
+    finalPrice = (price * underAge);
+} else if (userAge > 65) {
+    finalPrice = (price * overAge)
+} else {
+    finalPrice = price
+}
+
+console.log(finalPrice);
