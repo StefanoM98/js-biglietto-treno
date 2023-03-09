@@ -15,16 +15,13 @@ if (isNaN(kilometres && userAge)){
 const price = kilometres * 0.21;
 console.log(price);
 
-// DEFINIAMO GLI SCONTI IN BASE ALL'ETA' DEL CLIENTE
-const underAge = 0.80;
-const overAge = 0.60;
 // Calcoliamo il prezzo in base all'età del cliente
 let finalPrice = ""
 
 if (userAge <= 18) {
-    finalPrice = (price * underAge).toFixed(2);
+    finalPrice = (price - (price * 20 / 100).toFixed(2));
 } else if (userAge >= 65) {
-    finalPrice = (price * overAge).toFixed(2);
+    finalPrice = (price - (price * 40 / 100)).toFixed(2);
 } else {
     finalPrice = price
 }
